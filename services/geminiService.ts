@@ -23,7 +23,8 @@ const extractJson = (text: string) => {
 };
 
 export const analyzeNews = async (newsText: string): Promise<AnalysisResult> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+
   
   try {
     const response = await ai.models.generateContent({
