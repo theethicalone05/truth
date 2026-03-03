@@ -28,7 +28,7 @@ export const analyzeNews = async (newsText: string): Promise<AnalysisResult> => 
   
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-1.5-flash",
+      model: "gemini-3-flash-preview",
       contents: `Audit this news claim for veracity.
       
       INPUT: "${newsText}"
